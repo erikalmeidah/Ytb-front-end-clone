@@ -1,0 +1,125 @@
+.thumbnail{
+  width: 100%;
+}
+
+.video-title,
+.video-link{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.video-author, .video-stats{
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author{
+  margin-bottom: 4px;
+}
+
+.video-info-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr; 
+}
+
+.profile-picture{
+  width: 36px;
+  border-radius: 50%;
+}
+
+.thumbnail-row{
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-time{
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  color: white;
+  background-color: black;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px;
+  opacity: 90%;
+}
+
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+  /*text-decoration: underline; due to inheritance, everything inside the grid gets underlined*/
+}
+
+@media (max-width: 750px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.pfp{
+  display: inline-block;
+  position: relative;
+}
+
+.pfp:hover .channel-card{
+  cursor: pointer;
+  opacity: 1;
+}
+
+.channel-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: white;
+  font-size: 12px;
+  border-radius: 5px;
+  flex-direction: row;
+  width: 180px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  transition: box-shadow .15s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.card-profile-picture{
+  border-radius: 50%;
+  width: 45px;
+}
+
+.card-stats{
+  margin-left: 5px;
+}
+
+.card-video-author{
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.subscribers{
+  font-size: 12px;
+  color: rgb(110, 110, 110);
+}
